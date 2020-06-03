@@ -4,10 +4,10 @@ class BankAccount
     attr_writer
     attr_accessor :balance, :status
     
-  def initialize (name, balance=1000, status="open")
+  def initialize (name)
   @name = name
   @balance = 1000
-  @status = status
+  @status = "open"
   end
 
   def deposit(amount)
@@ -25,6 +25,7 @@ class BankAccount
 
   def close_account
     @status = "closed"
+    @balance = 0
   end
 
 
